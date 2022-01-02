@@ -1,0 +1,137 @@
+body {
+    background-image: url(./assets/fondo.png);
+    background-position: center;
+    background-size: cover;
+}
+
+.contenedor {
+    display: grid;
+    grid-template-areas: 
+    'header header header'
+    'section__img section__img contenido'
+    'footer footer footer';
+    grid-gap: 1rem;
+}
+
+.header {
+    grid-area: header;
+}
+
+.section__img {
+    grid-area: section__img;
+    display: flex;
+    justify-content: center;
+    margin: 50px;
+}
+
+.section__img img {
+    width: 300px;
+    height: 400px;
+}
+
+.contenido {
+    margin: 50px;
+    max-width: 500px;
+    grid-area: contenido;
+}
+
+.contenido h2 {
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 30px;
+}
+
+.contenido p {
+    font-size: 14px;
+    font-weight: 300;
+    max-width: 350px;
+    margin-bottom: 30px;
+    
+}
+
+.btn {
+    width: 150px;
+    padding: 10px 15px 10px 15px ;
+    border: 0px;
+    border-radius: 20px;
+    box-shadow: 3px 2px 3px rgba(0, 0, 0, 0.808);
+    color: #0093E9;
+    font-weight:600;
+}
+
+.btn:hover {
+    cursor: pointer;
+    background: #0093E9;
+    color: aliceblue;
+}
+
+.footer {
+    display: flex;
+    justify-content: end;
+    grid-area: footer;
+}
+
+.footer i {
+    color: aliceblue;
+    margin: 0px 30px;
+}
+
+.footer i:hover {
+    font-size: 35px;
+    cursor: pointer;
+}
+
+@media (max-width: 500px) {
+    .contenedor {
+        display: grid;
+    grid-template-areas: 
+    'header'
+    'section__img'
+    'contenido'
+    'footer';
+    grid-gap: 1rem;
+    }
+    .section__img {
+        margin: 0px;
+    }
+    .section__img img {
+        width: 300px;
+        height: 400px;
+        padding: 50px;
+    }
+
+    .contenido {
+        padding: 0px;
+        margin: 0px;
+        display: grid;
+        grid-gap: 20px;
+        max-width: 500px;
+    }
+
+    .contenido h2 {
+        margin: 0px;
+        padding: 0px;
+        text-align: center;
+        font-size: 25px;
+        font-weight: 800;
+    }
+
+    .contenido p {
+        text-align: center;
+        font-size: 12px;
+        margin: auto;
+    }
+
+    .btn {
+        margin: 10px auto 30px auto;
+    }
+
+    .footer {
+        display: flex;
+        justify-content: center;
+    }
+
+    .footer i {
+        margin: 10px;
+    }
+}
